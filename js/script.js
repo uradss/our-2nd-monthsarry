@@ -1,5 +1,5 @@
-// ===== CONFIG =====
-const CORRECT_NAME = "dianna faith celiona";
+
+const CORRECT_NAME = "dianna faith cellona";
 
 let currentAudio = null;
 let currentSongId = null;
@@ -25,7 +25,7 @@ function checkName() {
   const loaderMsg = document.getElementById('loaderMessage');
   const spinner = document.getElementById('loaderSpinner');
 
-  // Show loading
+
   overlay.classList.add('show');
   spinner.style.display = 'block';
   loaderMsg.textContent = 'Checking...';
@@ -38,7 +38,6 @@ function checkName() {
       loaderMsg.textContent = 'HI BABYYYYY IKAW PALA YAN 💕';
       loaderMsg.className = 'loader-message correct';
     } else {
-      // Use whatever name they typed
       const typedName = input.value.trim();
       loaderMsg.textContent = 'ay ikaw pala yan ' + typedName;
       loaderMsg.className = 'loader-message wrong';
@@ -56,7 +55,7 @@ function checkName() {
         document.getElementById('limited').style.display = 'block';
       }
 
-      // Auto-play for everyone
+
       setTimeout(() => {
         playSong(DEFAULT_SONG.id, DEFAULT_SONG.src);
       }, 400);
@@ -88,7 +87,7 @@ function showLimitedSection(id) {
 function playSong(songId, audioSrc) {
   const songEl = document.getElementById(songId);
   if (!songEl) {
-    // Still try to play even if UI element missing
+
     if (currentAudio) currentAudio.pause();
     currentAudio = new Audio(audioSrc);
     currentAudio.volume = 0.7;
