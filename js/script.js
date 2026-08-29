@@ -207,7 +207,7 @@ function handleNo() {
   noBtn.style.left = Math.floor(Math.random() * maxX) + 'px';
   noBtn.style.top = Math.floor(Math.random() * maxY) + 'px';
   noBtn.style.transition = 'all 0.22s ease';
-  if (noClickCount >= 3) noBtn.textContent = 'sure ka? 🥺';
-  if (noClickCount >= 5) noBtn.textContent = 'please... 😭';
-  if (noClickCount >= 7) noBtn.textContent = 'sige na yes na 💕';
+  if (noClickCount >= 3) noBtn.textContent = 'no 🥺';
+  if (noClickCount >= 5) noBtn.textContent = 'no 😭';
+  if (noClickCount >= 7) noBtn.textContent = 'no, please. i yes mo na 💕';
 }
